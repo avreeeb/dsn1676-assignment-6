@@ -1,3 +1,4 @@
+
 html {
   background-color: #e2e2e2;
 }
@@ -33,16 +34,35 @@ div {
   width: 200px;
 
   background-color: limegreen;
+  -webkit-transition: all 250ms linear;
+  transition: all 250ms linear;
+  opacity: 1;
+}
+
+.js-box-dissappear {
+  opacity: 0;
+}
+
+section {
+  overflow: hidden;
 }
 
 .diamond {
   height: 80px;
-  right: 2em;
+  right: -7em;
   top: calc(50% - 40px);
   width: 80px;
 
   background-color: hotpink;
+  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
+  -webkit-transition: all 250ms linear;
+  transition: all 250ms linear;
+}
+
+.js-diamond-move {
+  -webkit-transform: translateX(-145px) rotate(45deg);
+  transform: translateX(-145px) rotate(45deg);
 }
 
 .panel {
@@ -54,12 +74,23 @@ div {
 
   color: darkgoldenrod;
   text-align: center;
+  max-height: 8em;
+  overflow: hidden;
+  -webkit-transition: all 250ms linear;
+  transition: all 250ms linear;
+}
+
+.js-panel-expand {
+  max-height: 0;
+  -webkit-transition: all 250ms linear;
+  transition: all 250ms linear;
 }
 
 .panel h2 {
   margin: 0;
   padding: 3rem 0;
 }
+
 
 .circle {
   height: 100px;
